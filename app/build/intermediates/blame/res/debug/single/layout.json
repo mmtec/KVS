@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\KVS\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_klasse_v.xml",
+        "source": "C:\\KVS\\app\\src\\main\\res\\layout\\activity_klasse_v.xml"
+    },
+    {
+        "merged": "C:\\KVS\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_schueler_v.xml",
+        "source": "C:\\KVS\\app\\src\\main\\res\\layout\\activity_schueler_v.xml"
+    },
+    {
+        "merged": "C:\\KVS\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_start.xml",
+        "source": "C:\\KVS\\app\\src\\main\\res\\layout\\activity_start.xml"
+    },
+    {
+        "merged": "C:\\KVS\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_klasse_e.xml",
+        "source": "C:\\KVS\\app\\src\\main\\res\\layout\\activity_klasse_e.xml"
+    },
+    {
+        "merged": "C:\\KVS\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_schueler_e.xml",
+        "source": "C:\\KVS\\app\\src\\main\\res\\layout\\activity_schueler_e.xml"
+    }
+]

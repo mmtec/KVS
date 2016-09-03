@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:layout_margin="15dp" >
+
+    <EditText
+        android:id="@+id/schV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Vorname des Schülers" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/schN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nachname des Schülers" />
+
+    <EditText
+        android:id="@+id/schX"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="X-Koordinate" />
+
+    <EditText
+        android:id="@+id/schY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Y-Koordinate" />
+
+    <Button
+        android:id="@+id/schE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Erstellen!" />
+
+</LinearLayout>
