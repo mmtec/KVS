@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class SchuelerE extends Activity {
 
@@ -16,7 +17,7 @@ public class SchuelerE extends Activity {
 	private EditText vn, nn, x, y;
 	private Button e;
 	private SQLiteDatabase db;
-	private int kfid;
+	private int kfid, posx, posy;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +25,11 @@ public class SchuelerE extends Activity {
 		setContentView(R.layout.activity_schueler_e);
 		vn = (EditText)findViewById(R.id.schV);
 		nn = (EditText)findViewById(R.id.schN);
-		x = (EditText)findViewById(R.id.schX);
-		y = (EditText)findViewById(R.id.schY);
 		e = (Button)findViewById(R.id.schE);
 		db = openOrCreateDatabase("KVS", MODE_PRIVATE, null);
 		int j = getIntent().getIntExtra("kfid", -1);
+		posx = getIntent().getIntExtra("posx", -1);
+		posy = getIntent().getIntExtra("posy", -1);
 		if(j != -1) {
 			kfid = j;
 		}
@@ -37,9 +38,13 @@ public class SchuelerE extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				neuerSchueler(vn.getText().toString(), nn.getText().toString(), Integer.parseInt(x.getText().toString()), Integer.parseInt(y.getText().toString()));
-				setResult(RESULT_OK);
-				finish();
+				if(posx != -1 && posy != -1) {
+					neuerSchueler(vn.getText().toString(), nn.getText().toString(), posx, posy);
+					setResult(RESULT_OK);
+					finish();
+				} else {
+					Toast.makeText(getApplicationContext(), "Ungültig!", Toast.LENGTH_LONG);
+				}
 			}
 		});
 

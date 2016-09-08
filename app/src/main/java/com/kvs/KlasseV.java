@@ -46,30 +46,11 @@ public class KlasseV extends Activity implements OnClickListener {
 		schuelerZuGrid();
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		super.onCreateOptionsMenu(menu);
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.klasse_v, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if(id == R.id.schuelerNeu){
-			onSchuelerNeu();
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
-
-	public void onSchuelerNeu() {
+	public void onSchuelerNeu(SchuelerView s) {
 		Intent intent = new Intent(getApplicationContext(), SchuelerE.class);
 		intent.putExtra("kfid", kfid);
+		intent.putExtra("posx", s.getPosx());
+		intent.putExtra("posy", s.getPosy());
 		startActivityForResult(intent, SchuelerE.KEY);
 	}
 
@@ -115,12 +96,11 @@ public class KlasseV extends Activity implements OnClickListener {
 
 					t.setText(vorname + " " + nachname);
 					t.setGravity(Gravity.CENTER); // DESIGN
-					LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 1); // DESIGN
-					t.setLayoutParams(lp); // DESIGN
+					LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 64, 1); // DESIGN
 
 					t.setOnClickListener(this);
 
-					lh.addView(t);
+					lh.addView(t, params);
 				} else {
 					SchuelerView t = new SchuelerView(this);
 
@@ -129,10 +109,10 @@ public class KlasseV extends Activity implements OnClickListener {
 
 					t.setText("/");
 					t.setGravity(Gravity.CENTER); // DESIGN
-					t.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 1)); // DESIGN
+					LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 64, 1); // DESIGN
 					t.setOnClickListener(this);
 
-					lh.addView(t);
+					lh.addView(t, params);
 				}
 			}
 		}
@@ -142,9 +122,12 @@ public class KlasseV extends Activity implements OnClickListener {
 	public void onClick(View view) {
 		SchuelerView s = (SchuelerView)view;
         Schueler schueler = s.getSchueler();
-
-        Intent intent = new Intent(getApplicationContext(), SchuelerV.class);
-        intent.putExtra("schueler", schueler);
-        startActivityForResult(intent, SchuelerV.KEY);
+		if(schueler != null) {
+			Intent intent = new Intent(getApplicationContext(), SchuelerV.class);
+			intent.putExtra("schueler", schueler);
+			startActivityForResult(intent, SchuelerV.KEY);
+		} else {
+			onSchuelerNeu(s);
+		}
 	}
 }

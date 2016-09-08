@@ -4,30 +4,39 @@
     api-level="23"
     density="xxhdpi"
     format="7"
-    timestamp="598907520626411"
-    token="-530011006790050801" >
+    timestamp="334693805121068"
+    token="-29533309509229123" >
 
     <task
         name="javac"
-        duration="406" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="197" />
+        duration="0" />
     <task
         name="verifier"
-        duration="49" />
+        duration="0" />
 
-    <artifact
-        location="C:\KVS\app\build\outputs\apk\app-debug.apk"
-        type="MAIN" />
-
-    <build timestamp="598907520626411" >
+    <build timestamp="334166295709799" >
         <artifact
-            location="C:\KVS\app\build\outputs\apk\app-debug.apk"
+            location="C:\Users\thawa\StudioProjects\KVS\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
+    <build timestamp="334604602090835" >
+        <artifact
+            location="C:\Users\thawa\StudioProjects\KVS\app\build\intermediates\res\resources-debug.ap_"
+            type="RESOURCES" />
+    </build>
+    <build
+        timestamp="334682184601518"
+        verifier="METHOD_DELETED" >
+        <artifact
+            location="C:\Users\thawa\StudioProjects\KVS\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
+            type="DEX" />
+    </build>
+    <build timestamp="334693805121068" />
 
 </instant-run>

@@ -29,8 +29,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f090017;
-        public static final int delete=0x7f090015;
+        public static final int action_settings=0x7f090015;
+        public static final int delete=0x7f090013;
         public static final int e=0x7f09000a;
         public static final int editText1=0x7f090007;
         public static final int editText2=0x7f090009;
@@ -38,15 +38,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int editText4=0x7f090001;
         public static final int editText5=0x7f090005;
         public static final int linearLayout1=0x7f09000c;
-        public static final int listView1=0x7f090013;
-        public static final int plus=0x7f090014;
-        public static final int schE=0x7f090011;
+        public static final int listView1=0x7f090011;
+        public static final int plus=0x7f090012;
+        public static final int schE=0x7f09000f;
         public static final int schN=0x7f09000e;
         public static final int schV=0x7f09000d;
-        public static final int schX=0x7f09000f;
-        public static final int schY=0x7f090010;
-        public static final int schuelerName=0x7f090012;
-        public static final int schuelerNeu=0x7f090016;
+        public static final int schuelerName=0x7f090010;
+        public static final int schuelerNeu=0x7f090014;
         public static final int textView1=0x7f090006;
         public static final int textView2=0x7f090008;
         public static final int textView3=0x7f090002;

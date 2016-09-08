@@ -21,20 +21,6 @@
         android:ems="10"
         android:hint="Nachname des Schülers" />
 
-    <EditText
-        android:id="@+id/schX"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="X-Koordinate" />
-
-    <EditText
-        android:id="@+id/schY"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Y-Koordinate" />
-
     <Button
         android:id="@+id/schE"
         android:layout_width="wrap_content"
