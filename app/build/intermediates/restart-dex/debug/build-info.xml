@@ -1,42 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="armeabi-v7a,armeabi"
+    abi="x86"
     api-level="23"
-    density="xxhdpi"
+    density="420dpi"
     format="7"
-    timestamp="334693805121068"
+    timestamp="417491924706894"
     token="-29533309509229123" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="216" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="31" />
     <task
         name="verifier"
-        duration="0" />
+        duration="7" />
 
-    <build timestamp="334166295709799" >
+    <artifact
+        location="C:\Users\thawa\StudioProjects\KVS\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
+        type="DEX" />
+
+    <build timestamp="417292752260108" >
         <artifact
             location="C:\Users\thawa\StudioProjects\KVS\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="334604602090835" >
-        <artifact
-            location="C:\Users\thawa\StudioProjects\KVS\app\build\intermediates\res\resources-debug.ap_"
-            type="RESOURCES" />
-    </build>
-    <build
-        timestamp="334682184601518"
-        verifier="METHOD_DELETED" >
+    <build timestamp="417491924706894" >
         <artifact
             location="C:\Users\thawa\StudioProjects\KVS\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
             type="DEX" />
     </build>
-    <build timestamp="334693805121068" />
 
 </instant-run>

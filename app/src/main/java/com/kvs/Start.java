@@ -123,7 +123,7 @@ public class Start extends Activity {
 				+ " klasseid INTEGER(5), fachid INTEGER (5));");
 		
 		db.execSQL("CREATE TABLE IF NOT EXISTS Note(nid INTEGER PRIMARY KEY ASC,"
-				+ " schuelerid INTEGER(5), hatid INTEGER(3))");
+				+ " hatid INTEGER(5), art VARCHAR(100), note INTEGER(1), tag INTEGER(2), monat INTEGER(2), jahr INTEGER(4))");
 	}
 	
 	public void listeFertigen() {

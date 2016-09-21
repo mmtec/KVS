@@ -9,5 +9,16 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_schueler_e">Schüler erstellen</string>
+    <string name="leistungsnachweise">Leistungsnachweise</string>
+    <string name="neuerLn">Neuen Leistungsnachweis hinzufügen</string>
+    <string-array name="lnArten">
+        <item>Extemporale</item>
+        <item>Schulaufgabe</item>
+        <item>Kurzarbeit</item>
+        <item>Rechenschaftsablage</item>
+        <item>Unterrichtsbeitrag</item>
+        <item>Mitarbeit</item>
+        <item>Referat</item>
+    </string-array>
 
 </resources>

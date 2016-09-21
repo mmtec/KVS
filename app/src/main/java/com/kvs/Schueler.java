@@ -51,8 +51,8 @@ public class Schueler implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString("vorname");
-        parcel.writeString("nachname");
+        parcel.writeString(vorname);
+        parcel.writeString(nachname);
         parcel.writeInt(posx);
         parcel.writeInt(posy);
         parcel.writeInt(sid);

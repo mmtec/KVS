@@ -10,4 +10,28 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/schuelerName"
         android:layout_margin="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/leistungsnachweise"
+        android:layout_margin="20dp"
+        android:id="@+id/textLn" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lnList"
+        android:layout_margin="20dp"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/neuerLn"
+        android:id="@+id/neuerLn"
+        android:layout_margin="20dp"/>
+
+
 </LinearLayout>
