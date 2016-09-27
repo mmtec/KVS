@@ -20,5 +20,9 @@
         <item>Mitarbeit</item>
         <item>Referat</item>
     </string-array>
+    <string-array name="lnOptionen">
+        <item>Bearbeiten</item>
+        <item>Löschen</item>
+    </string-array>
 
 </resources>

@@ -1,3 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\thawa\StudioProjects\KVS\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="d720ffc095b503fef2d2fe35b49bba839287505a">
+        <dex dex="C:\Users\thawa\StudioProjects\KVS\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_16f02ca57ce62cd00a5ce2a18a25f89f30e8ef6c\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\thawa\StudioProjects\KVS\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="014b39036104f0a693074bf250914b07b88ec7fe">
+        <dex dex="C:\Users\thawa\StudioProjects\KVS\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_c8ecdda1199f02d8a9b0277f7053ff066f61f8c2\classes.dex" />
+    </item>
+
+</items>

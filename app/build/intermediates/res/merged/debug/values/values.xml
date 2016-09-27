@@ -9,6 +9,10 @@
         <item>Mitarbeit</item>
         <item>Referat</item>
     </string-array>
+    <string-array name="lnOptionen">
+        <item>Bearbeiten</item>
+        <item>Löschen</item>
+    </string-array>
     <color name="black_overlay">#66000000</color>
     <declare-styleable name="ButtonBarContainerTheme"><attr format="reference" name="metaButtonBarStyle"/><attr format="reference" name="metaButtonBarButtonStyle"/></declare-styleable>
     <dimen name="activity_horizontal_margin">16dp</dimen>

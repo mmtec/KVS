@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -34,10 +35,25 @@ public class SchuelerV extends Activity {
         schueler = getIntent().getParcelableExtra("schueler");
         t = (TextView)findViewById(R.id.schuelerName);
         neu = (Button)findViewById(R.id.neuerLn);
+
         lnliste = (ListView)findViewById(R.id.lnList);
         a = new ArrayAdapter<Leistungsnachweis>(this, android.R.layout.simple_list_item_1);
         lnliste.setAdapter(a);
+        lnliste.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                lnClick(adapterView, view, i, l);
+            }
+        });
+
         db = openOrCreateDatabase("KVS", MODE_PRIVATE, null);
+        int sid = schueler.getSid();
+
+        Cursor c = db.rawQuery("SELECT hid FROM Hat WHERE Hat.schuelerid= "+ sid, null);
+        if(c.moveToFirst()) {
+            hatid = c.getInt(0);
+        }
+        c.close();
 
         String vorname = schueler.getVorname();
         String nachname = schueler.getNachname();
@@ -55,13 +71,6 @@ public class SchuelerV extends Activity {
     }
 
     public void lnHinzufuegen(NumberPicker np, Spinner spinner, DatePicker dp) {
-        int sid = schueler.getSid();
-
-        Cursor c = db.rawQuery("SELECT hid FROM Hat WHERE Hat.schuelerid= "+ sid, null);
-        if(c.moveToFirst()) {
-            hatid = c.getInt(0);
-        }
-
         ContentValues noteValues = new ContentValues();
         noteValues.put("hatid", hatid);
         noteValues.put("art", spinner.getSelectedItem().toString());
@@ -94,6 +103,23 @@ public class SchuelerV extends Activity {
                 a.add(ln);
             } while(c.moveToNext());
         }
+        c.close();
+    }
+
+    public void lnClick(AdapterView<?> adapterView, View view, int i, long l) {
+        Leistungsnachweis ln = (Leistungsnachweis) lnliste.getItemAtPosition(i);
+
+        Bundle bundle = new Bundle();
+        bundle.putParcelable("Leistungsnachweis", ln);
+
+        LnDialog dialog = new LnDialog();
+        dialog.setArguments(bundle);
+        dialog.show(getFragmentManager(), "LnDialog");
+    }
+
+    public void deleteLn(Leistungsnachweis ln) {
+        db.delete("Note", "nid="+ln.getNid(), null);
+        listeFertigen();
     }
 
 }

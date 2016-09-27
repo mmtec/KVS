@@ -28,8 +28,29 @@
                     "startLine": 11,
                     "startColumn": 4,
                     "startOffset": 349,
+                    "endLine": 14,
+                    "endColumn": 19,
+                    "endOffset": 462
+                },
+                "from": {
+                    "file": "C:\\Users\\thawa\\StudioProjects\\KVS\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 976,
+                        "endLine": 25,
+                        "endColumn": 19,
+                        "endOffset": 1092
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 467,
                     "endColumn": 49,
-                    "endOffset": 394
+                    "endOffset": 512
                 },
                 "from": {
                     "file": "C:\\Users\\thawa\\StudioProjects\\KVS\\app\\src\\main\\res\\values\\colors.xml",
@@ -44,11 +65,11 @@
             },
             {
                 "to": {
-                    "startLine": 13,
+                    "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 584,
+                    "startOffset": 702,
                     "endColumn": 57,
-                    "endOffset": 637
+                    "endOffset": 755
                 },
                 "from": {
                     "file": "C:\\Users\\thawa\\StudioProjects\\KVS\\app\\src\\main\\res\\values\\dimens.xml",
@@ -63,11 +84,11 @@
             },
             {
                 "to": {
-                    "startLine": 14,
+                    "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 642,
+                    "startOffset": 760,
                     "endColumn": 55,
-                    "endOffset": 693
+                    "endOffset": 811
                 },
                 "from": {
                     "file": "C:\\Users\\thawa\\StudioProjects\\KVS\\app\\src\\main\\res\\values\\dimens.xml",
@@ -82,11 +103,11 @@
             },
             {
                 "to": {
-                    "startLine": 15,
+                    "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 698,
+                    "startOffset": 816,
                     "endColumn": 61,
-                    "endOffset": 755
+                    "endOffset": 873
                 },
                 "from": {
                     "file": "C:\\Users\\thawa\\StudioProjects\\KVS\\app\\src\\main\\res\\values\\strings.xml",
@@ -101,11 +122,11 @@
             },
             {
                 "to": {
-                    "startLine": 16,
+                    "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 760,
+                    "startOffset": 878,
                     "endColumn": 40,
-                    "endOffset": 796
+                    "endOffset": 914
                 },
                 "from": {
                     "file": "C:\\Users\\thawa\\StudioProjects\\KVS\\app\\src\\main\\res\\values\\strings.xml",
@@ -120,11 +141,11 @@
             },
             {
                 "to": {
-                    "startLine": 17,
+                    "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 801,
+                    "startOffset": 919,
                     "endColumn": 53,
-                    "endOffset": 850
+                    "endOffset": 968
                 },
                 "from": {
                     "file": "C:\\Users\\thawa\\StudioProjects\\KVS\\app\\src\\main\\res\\values\\strings.xml",
@@ -139,11 +160,11 @@
             },
             {
                 "to": {
-                    "startLine": 18,
+                    "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 855,
+                    "startOffset": 973,
                     "endColumn": 56,
-                    "endOffset": 907
+                    "endOffset": 1025
                 },
                 "from": {
                     "file": "C:\\Users\\thawa\\StudioProjects\\KVS\\app\\src\\main\\res\\values\\strings.xml",
@@ -158,11 +179,11 @@
             },
             {
                 "to": {
-                    "startLine": 19,
+                    "startLine": 23,
                     "startColumn": 4,
-                    "startOffset": 912,
+                    "startOffset": 1030,
                     "endColumn": 52,
-                    "endOffset": 960
+                    "endOffset": 1078
                 },
                 "from": {
                     "file": "C:\\Users\\thawa\\StudioProjects\\KVS\\app\\src\\main\\res\\values\\strings.xml",
@@ -177,11 +198,11 @@
             },
             {
                 "to": {
-                    "startLine": 20,
+                    "startLine": 24,
                     "startColumn": 4,
-                    "startOffset": 965,
+                    "startOffset": 1083,
                     "endColumn": 65,
-                    "endOffset": 1026
+                    "endOffset": 1144
                 },
                 "from": {
                     "file": "C:\\Users\\thawa\\StudioProjects\\KVS\\app\\src\\main\\res\\values\\strings.xml",
@@ -196,11 +217,11 @@
             },
             {
                 "to": {
-                    "startLine": 21,
+                    "startLine": 25,
                     "startColumn": 4,
-                    "startOffset": 1031,
+                    "startOffset": 1149,
                     "endColumn": 70,
-                    "endOffset": 1097
+                    "endOffset": 1215
                 },
                 "from": {
                     "file": "C:\\Users\\thawa\\StudioProjects\\KVS\\app\\src\\main\\res\\values\\strings.xml",
@@ -215,11 +236,11 @@
             },
             {
                 "to": {
-                    "startLine": 22,
+                    "startLine": 26,
                     "startColumn": 4,
-                    "startOffset": 1102,
+                    "startOffset": 1220,
                     "endColumn": 68,
-                    "endOffset": 1166
+                    "endOffset": 1284
                 },
                 "from": {
                     "file": "C:\\Users\\thawa\\StudioProjects\\KVS\\app\\src\\main\\res\\values\\strings.xml",
@@ -234,11 +255,11 @@
             },
             {
                 "to": {
-                    "startLine": 23,
+                    "startLine": 27,
                     "startColumn": 4,
-                    "startOffset": 1171,
+                    "startOffset": 1289,
                     "endColumn": 58,
-                    "endOffset": 1225
+                    "endOffset": 1343
                 },
                 "from": {
                     "file": "C:\\Users\\thawa\\StudioProjects\\KVS\\app\\src\\main\\res\\values\\strings.xml",
@@ -253,11 +274,11 @@
             },
             {
                 "to": {
-                    "startLine": 24,
+                    "startLine": 28,
                     "startColumn": 4,
-                    "startOffset": 1230,
+                    "startOffset": 1348,
                     "endColumn": 71,
-                    "endOffset": 1297
+                    "endOffset": 1415
                 },
                 "from": {
                     "file": "C:\\Users\\thawa\\StudioProjects\\KVS\\app\\src\\main\\res\\values\\strings.xml",
@@ -272,12 +293,12 @@
             },
             {
                 "to": {
-                    "startLine": 25,
+                    "startLine": 29,
                     "startColumn": 4,
-                    "startOffset": 1302,
-                    "endLine": 32,
+                    "startOffset": 1420,
+                    "endLine": 36,
                     "endColumn": 12,
-                    "endOffset": 1589
+                    "endOffset": 1707
                 },
                 "from": {
                     "file": "C:\\Users\\thawa\\StudioProjects\\KVS\\app\\src\\main\\res\\values\\styles.xml",
@@ -293,12 +314,12 @@
             },
             {
                 "to": {
-                    "startLine": 33,
+                    "startLine": 37,
                     "startColumn": 4,
-                    "startOffset": 1594,
-                    "endLine": 35,
+                    "startOffset": 1712,
+                    "endLine": 39,
                     "endColumn": 12,
-                    "endOffset": 1749
+                    "endOffset": 1867
                 },
                 "from": {
                     "file": "C:\\Users\\thawa\\StudioProjects\\KVS\\app\\src\\main\\res\\values\\styles.xml",
@@ -314,12 +335,12 @@
             },
             {
                 "to": {
-                    "startLine": 36,
+                    "startLine": 40,
                     "startColumn": 4,
-                    "startOffset": 1754,
-                    "endLine": 42,
+                    "startOffset": 1872,
+                    "endLine": 46,
                     "endColumn": 12,
-                    "endOffset": 2077
+                    "endOffset": 2195
                 },
                 "from": {
                     "file": "C:\\Users\\thawa\\StudioProjects\\KVS\\app\\src\\main\\res\\values\\styles.xml",
@@ -335,11 +356,11 @@
             },
             {
                 "to": {
-                    "startLine": 43,
+                    "startLine": 47,
                     "startColumn": 4,
-                    "startOffset": 2082,
+                    "startOffset": 2200,
                     "endColumn": 35,
-                    "endOffset": 2113
+                    "endOffset": 2231
                 },
                 "from": {
                     "file": "C:\\Users\\thawa\\StudioProjects\\KVS\\app\\src\\main\\res\\values\\styles.xml",
@@ -354,12 +375,12 @@
             },
             {
                 "to": {
-                    "startLine": 44,
+                    "startLine": 48,
                     "startColumn": 4,
-                    "startOffset": 2118,
-                    "endLine": 49,
+                    "startOffset": 2236,
+                    "endLine": 53,
                     "endColumn": 12,
-                    "endOffset": 2457
+                    "endOffset": 2575
                 },
                 "from": {
                     "file": "C:\\Users\\thawa\\StudioProjects\\KVS\\app\\src\\main\\res\\values\\styles.xml",
