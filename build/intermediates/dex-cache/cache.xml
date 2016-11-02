@@ -4,15 +4,35 @@
     <item
         jar="C:\Users\thawa\StudioProjects\KVS\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
+        optimize="true"
         revision="24.0.1"
-        sha1="d720ffc095b503fef2d2fe35b49bba839287505a">
+        sha1="c048bf1f67dc5258a6e231544171e960725101da">
         <dex dex="C:\Users\thawa\StudioProjects\KVS\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_16f02ca57ce62cd00a5ce2a18a25f89f30e8ef6c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thawa\StudioProjects\KVS\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="68072dd751ab1d9572ce0a07c6324001a2b285e0">
+        <dex dex="C:\Users\thawa\StudioProjects\KVS\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_16f02ca57ce62cd00a5ce2a18a25f89f30e8ef6c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thawa\StudioProjects\KVS\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="aef909164048076e15f38156dca305227b486216">
+        <dex dex="C:\Users\thawa\StudioProjects\KVS\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_c8ecdda1199f02d8a9b0277f7053ff066f61f8c2\classes.dex" />
     </item>
     <item
         jar="C:\Users\thawa\StudioProjects\KVS\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
+        optimize="true"
         revision="24.0.1"
-        sha1="014b39036104f0a693074bf250914b07b88ec7fe">
+        sha1="f06ba30cc781c0e24493bb5a3de99015dd9ef52d">
         <dex dex="C:\Users\thawa\StudioProjects\KVS\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_c8ecdda1199f02d8a9b0277f7053ff066f61f8c2\classes.dex" />
     </item>
 

@@ -25,6 +25,7 @@ public class LnDialog extends DialogFragment {
                                 break;
                             case 1:
                                 ((SchuelerV)getActivity()).deleteLn(ln);
+                                break;
                         }
                     }
                 });

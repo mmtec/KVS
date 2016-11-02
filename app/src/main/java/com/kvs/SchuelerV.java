@@ -20,11 +20,12 @@ public class SchuelerV extends Activity {
 
     public static int KEY = 2984756;
     private Schueler schueler;
-    private TextView t;
+    private TextView t, dn;
     private Button neu;
     private ListView lnliste;
     private SQLiteDatabase db;
     private int hatid;
+    private boolean gefaehrdet;
     private ArrayAdapter<Leistungsnachweis> a;
 
 
@@ -34,6 +35,7 @@ public class SchuelerV extends Activity {
         setContentView(R.layout.activity_schueler_v);
         schueler = getIntent().getParcelableExtra("schueler");
         t = (TextView)findViewById(R.id.schuelerName);
+        dn = (TextView)findViewById(R.id.dnNote);
         neu = (Button)findViewById(R.id.neuerLn);
 
         lnliste = (ListView)findViewById(R.id.lnList);
@@ -67,6 +69,7 @@ public class SchuelerV extends Activity {
                 dialog.show(getFragmentManager(), "LnEDialog");
             }
         });
+        dnBerechnen();
         listeFertigen();
     }
 
@@ -81,6 +84,38 @@ public class SchuelerV extends Activity {
         insert("Note", null, noteValues);
 
         listeFertigen();
+    }
+
+    public void dnBerechnen() {
+        Cursor c = db.rawQuery("SELECT note, art FROM Note WHERE hatid = "+ hatid, null);
+        float ges = 0;
+        float doppelt = 0;
+        if(c.moveToFirst()) {
+            do {
+                String art = c.getString(c.getColumnIndex("art"));
+                if(art.equals("Schulaufgabe")) {
+                    doppelt += 1;
+                     ges += c.getFloat(c.getColumnIndex("note"));
+                }
+                ges += c.getFloat(c.getColumnIndex("note"));
+            } while(c.moveToNext());
+        }
+        if(c.getCount() != 0) {
+            float durchschnitt = (Math.round((ges / (c.getCount() + doppelt))*100.0F)) / 100.0F;
+            dn.setText(durchschnitt + "");
+            if(durchschnitt >= 4.5) {
+                ContentValues gValue = new ContentValues();
+                gValue.put("gefaehrdet", 1);
+                db.update("Schueler", gValue, "sid="+ schueler.getSid(), null);
+            } else {
+                ContentValues gValue = new ContentValues();
+                gValue.put("gefaehrdet", 0);
+                db.update("Schueler", gValue, "sid="+ schueler.getSid(), null);
+            }
+        } else {
+            dn.setText("0");
+        }
+        c.close();
     }
 
     public long insert(String table, String nullColumnHack, ContentValues values){
@@ -103,6 +138,7 @@ public class SchuelerV extends Activity {
                 a.add(ln);
             } while(c.moveToNext());
         }
+        dnBerechnen();
         c.close();
     }
 
@@ -122,4 +158,9 @@ public class SchuelerV extends Activity {
         listeFertigen();
     }
 
+    @Override
+    public void onBackPressed() {
+        setResult(RESULT_OK);
+        finish();
+    }
 }

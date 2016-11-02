@@ -1,0 +1,36 @@
+#Internal package file, do not edit.
+#Fri Oct 21 22:45:31 CEST 2016
+2.base=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\res\\resources-debug.ap_
+5.file=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_schueler_e.xml
+5.set=ANDROID_RESOURCE
+3.base=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\res\\resources-debug.ap_
+6.file=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_klasse_e.xml
+2.set=ANDROID_RESOURCE
+10.set=ANDROID_RESOURCE
+10.file=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_start.xml
+4.base=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\res\\resources-debug.ap_
+7.file=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\res\\resources-debug.ap_\\AndroidManifest.xml
+7.set=ANDROID_RESOURCE
+count=11
+0.file=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxhdpi-v4\\ic_launcher.png
+5.base=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\res\\resources-debug.ap_
+8.file=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_klasse_v.xml
+4.set=ANDROID_RESOURCE
+6.base=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\res\\resources-debug.ap_
+1.file=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\menu\\klasse_v.xml
+9.set=ANDROID_RESOURCE
+9.file=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\ln_e_dialog.xml
+10.base=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\res\\resources-debug.ap_
+1.set=ANDROID_RESOURCE
+7.base=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\res\\resources-debug.ap_
+2.file=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\menu\\start.xml
+6.set=ANDROID_RESOURCE
+0.base=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\res\\resources-debug.ap_
+8.base=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\res\\resources-debug.ap_
+3.file=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\res\\resources-debug.ap_\\resources.arsc
+3.set=ANDROID_RESOURCE
+1.base=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\res\\resources-debug.ap_
+9.base=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\res\\resources-debug.ap_
+4.file=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_schueler_v.xml
+8.set=ANDROID_RESOURCE
+0.set=ANDROID_RESOURCE

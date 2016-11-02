@@ -107,14 +107,14 @@ public class Start extends Activity {
 		db = openOrCreateDatabase("KVS", MODE_PRIVATE, null);
 		
 		db.execSQL("CREATE TABLE IF NOT EXISTS Klasse"
-				+ "(kid INTEGER PRIMARY KEY ASC, klassename VARCHAR(5), reihen INTEGER(1), spalten INTEGER(1));");
+				+ "(kid INTEGER PRIMARY KEY ASC, klassename VARCHAR(10), reihen INTEGER(2), spalten INTEGER(2));");
 		
 		db.execSQL("CREATE TABLE IF NOT EXISTS Schueler(sid INTEGER PRIMARY KEY ASC,"
-				+ " nachname VARCHAR(100), vorname VARCHAR(100), posx INTEGER(1),"
-				+ " posy INTEGER(1));");
+				+ " nachname VARCHAR(100), vorname VARCHAR(100), posx INTEGER(2),"
+				+ " posy INTEGER(2), gefaehrdet INTEGER(1));");
 		
 		db.execSQL("CREATE TABLE IF NOT EXISTS Fach(fid INTEGER PRIMARY KEY ASC,"
-				+ " fachname VARCHAR(15), kuerzel VARCHAR(5));");
+				+ " fachname VARCHAR(30), kuerzel VARCHAR(5));");
 		
 		db.execSQL("CREATE TABLE IF NOT EXISTS Hat(hid INTEGER PRIMARY KEY ASC,"
 				+ " kfid INTEGER(5), schuelerid INTEGER(5));");
@@ -123,7 +123,7 @@ public class Start extends Activity {
 				+ " klasseid INTEGER(5), fachid INTEGER (5));");
 		
 		db.execSQL("CREATE TABLE IF NOT EXISTS Note(nid INTEGER PRIMARY KEY ASC,"
-				+ " hatid INTEGER(5), art VARCHAR(100), note INTEGER(1), tag INTEGER(2), monat INTEGER(2), jahr INTEGER(4))");
+				+ " hatid INTEGER(5), art VARCHAR(100), note INTEGER(2), tag INTEGER(2), monat INTEGER(2), jahr INTEGER(4))");
 	}
 	
 	public void listeFertigen() {

@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 public class KlasseE extends Activity {
 
-	public static int KEY = 42598;
+	public static final int KEY = 42598;
 	private Button e;
 	private EditText reihen, spalten, name, fach, kuerzel;
 	private TextView richtig;

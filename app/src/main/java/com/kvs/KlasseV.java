@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
@@ -58,7 +59,7 @@ public class KlasseV extends Activity implements OnClickListener {
 		if (requestCode == SchuelerE.KEY && resultCode == Activity.RESULT_OK) {
 			schuelerZuGrid();
 		} else if (requestCode == SchuelerV.KEY && resultCode == Activity.RESULT_OK) {
-            // stub
+            schuelerZuGrid();
         }
 	}
 
@@ -76,7 +77,7 @@ public class KlasseV extends Activity implements OnClickListener {
 
 			for(int j = 0; j < spalten; j++) {
 
-				Cursor c = db.rawQuery("SELECT vorname, nachname, posx, posy, sid FROM Schueler, Hat "
+				Cursor c = db.rawQuery("SELECT vorname, nachname, posx, posy, sid, gefaehrdet FROM Schueler, Hat "
 						+ "WHERE Hat.schuelerid = Schueler.sid AND Hat.kfid =" + kfid + " AND posx="+j+" AND posy="+i, null);
 
 				if(c.getCount() > 0) {
@@ -87,20 +88,26 @@ public class KlasseV extends Activity implements OnClickListener {
 					int posx = c.getInt(c.getColumnIndex("posx"));
 					int posy = c.getInt(c.getColumnIndex("posy"));
                     int sid = c.getInt(c.getColumnIndex("sid"));
-					c.close();
 
 					Schueler schueler = new Schueler(vorname, nachname, posx, posy, sid);
 
 					SchuelerView t = new SchuelerView(this);
 					t.setSchueler(schueler);
 
-					t.setText(vorname + " " + nachname);
+					t.setText(vorname + "\n" + nachname);
 					t.setGravity(Gravity.CENTER); // DESIGN
-					LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 64, 1); // DESIGN
+					if(c.getInt(c.getColumnIndex("gefaehrdet")) == 1) {
+						t.setTextColor(Color.RED);
+					} else {
+						t.setTextColor(Color.BLACK);
+					}
+					LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1); // DESIGN
 
 					t.setOnClickListener(this);
+					t.setTextSize(16);
 
 					lh.addView(t, params);
+					c.close();
 				} else {
 					SchuelerView t = new SchuelerView(this);
 
@@ -109,8 +116,9 @@ public class KlasseV extends Activity implements OnClickListener {
 
 					t.setText("/");
 					t.setGravity(Gravity.CENTER); // DESIGN
-					LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 64, 1); // DESIGN
+					LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1); // DESIGN
 					t.setOnClickListener(this);
+					t.setTextSize(16);
 
 					lh.addView(t, params);
 				}
@@ -121,6 +129,7 @@ public class KlasseV extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View view) {
 		SchuelerView s = (SchuelerView)view;
+		s.setPressed(true);
         Schueler schueler = s.getSchueler();
 		if(schueler != null) {
 			Intent intent = new Intent(getApplicationContext(), SchuelerV.class);
