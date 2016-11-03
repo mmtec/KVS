@@ -15,7 +15,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="87a1378980dde9599daf9ab9232217ff1e4548e5">
+        sha1="ad68c01f6e174b45ea87b8a08628bce39331697a">
         <dex dex="C:\Users\thawa\StudioProjects\KVS\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_16f02ca57ce62cd00a5ce2a18a25f89f30e8ef6c\classes.dex" />
     </item>
     <item
@@ -24,7 +24,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="536a7fe749ebc5cf17fff7029cf144afe5d67ae3">
+        sha1="9b701150dd11500da9d6c5007aafc3cdfa07c7a0">
         <dex dex="C:\Users\thawa\StudioProjects\KVS\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_c8ecdda1199f02d8a9b0277f7053ff066f61f8c2\classes.dex" />
     </item>
     <item

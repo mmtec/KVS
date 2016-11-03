@@ -1,6 +1,7 @@
 package com.kvs;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -82,8 +83,8 @@ public class Start extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				dbLoeschen();
-				
+				DBDialog dialog = new DBDialog();
+				dialog.show(getFragmentManager(), "DBDialog");
 			}
 		});
 		

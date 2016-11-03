@@ -16,6 +16,8 @@ import android.widget.NumberPicker;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.math.BigDecimal;
+
 /**
  * Activity, die die Schülerakte zeigt.
  */
@@ -122,9 +124,12 @@ public class SchuelerV extends Activity {
             } while(c.moveToNext());
         }
         if(c.getCount() != 0) {
-            float durchschnitt = ((ges / (c.getCount() + doppelt))*100.0F) / 100.0F; // Berechnen des Durchschnitts, 2 Nachkommastellen
+            float durchschnitt = (Math.round((ges / (c.getCount() + doppelt))*100.0F)) / 100.0F; // Berechnen des Durchschnitts, 2 Nachkommastellen
 
-            dn.setText(durchschnitt + "");
+            BigDecimal myDec = new BigDecimal(durchschnitt);
+            myDec = myDec.setScale(2, BigDecimal.ROUND_FLOOR);
+
+            dn.setText(myDec + "");
 
             if(durchschnitt >= 4.5) { // Setzen auf Rot, wenn nötig
                 ContentValues gValue = new ContentValues();

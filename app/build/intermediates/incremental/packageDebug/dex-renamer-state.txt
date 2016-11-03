@@ -1,4 +1,4 @@
-#Thu Nov 03 11:51:16 CET 2016
+#Thu Nov 03 16:55:45 CET 2016
 base.0=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_c8ecdda1199f02d8a9b0277f7053ff066f61f8c2
 renamed.1=classes2.dex
 renamed.0=classes.dex
