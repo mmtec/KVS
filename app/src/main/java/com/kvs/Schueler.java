@@ -3,6 +3,10 @@ package com.kvs;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+/**
+ * Modellierung des Schülers
+ */
+
 public class Schueler implements Parcelable {
 	
 	private String vorname, nachname;

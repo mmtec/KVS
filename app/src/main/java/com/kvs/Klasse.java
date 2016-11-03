@@ -1,8 +1,8 @@
 package com.kvs;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
+/**
+ * Modellierung der Klasse
+ */
 
 public class Klasse {
 

@@ -4,8 +4,9 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
- * Created by thawa on 21.09.2016.
+ * Modellierung des Leistungsnachweises
  */
+
 public class Leistungsnachweis implements Parcelable {
 
     private int nid, hatid, note, tag, monat, jahr;

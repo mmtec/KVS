@@ -16,6 +16,10 @@ import android.widget.NumberPicker;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+/**
+ * Activity, die die Schülerakte zeigt.
+ */
+
 public class SchuelerV extends Activity {
 
     public static int KEY = 2984756;
@@ -28,6 +32,11 @@ public class SchuelerV extends Activity {
     private boolean gefaehrdet;
     private ArrayAdapter<Leistungsnachweis> a;
 
+    /**
+     * Wird beim Start der Activity aufgerufen.
+     * Instanziiert alle GUI-Objekte.
+     * Zur genaueren Beschreibung des Codes die Kommentare im Code ansehen!
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +52,7 @@ public class SchuelerV extends Activity {
         lnliste.setAdapter(a);
         lnliste.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) { // Leistungsnachweisliste - Ausführung von "lnClick()" bei Antippen auf einen LN
                 lnClick(adapterView, view, i, l);
             }
         });
@@ -53,18 +62,18 @@ public class SchuelerV extends Activity {
 
         Cursor c = db.rawQuery("SELECT hid FROM Hat WHERE Hat.schuelerid= "+ sid, null);
         if(c.moveToFirst()) {
-            hatid = c.getInt(0);
+            hatid = c.getInt(0); // Zuordnung des Fremdschlüssels
         }
         c.close();
 
         String vorname = schueler.getVorname();
         String nachname = schueler.getNachname();
 
-        t.setText(nachname + ", " + vorname);
+        t.setText(nachname + ", " + vorname); // Beschriften
 
         neu.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) { // Startet beim Tippen auf den Button einen Dialog zur Erstellung eines neuen LNs
                 LnEDialog dialog = new LnEDialog();
                 dialog.show(getFragmentManager(), "LnEDialog");
             }
@@ -72,6 +81,13 @@ public class SchuelerV extends Activity {
         dnBerechnen();
         listeFertigen();
     }
+
+    /**
+     * Fügt den neuen LN der Datenbank hinzu.
+     * @param np NumberPicker, der die Note enthält
+     * @param spinner Spinner, der die Art des LNs enthält
+     * @param dp DatePicker, der Tag, Monat und Jahr des LNs enthält
+     */
 
     public void lnHinzufuegen(NumberPicker np, Spinner spinner, DatePicker dp) {
         ContentValues noteValues = new ContentValues();
@@ -86,24 +102,31 @@ public class SchuelerV extends Activity {
         listeFertigen();
     }
 
+    /**
+     * Berechnet den Durchschnitt. Setzt in der DB gefaehrdet auf 1 (true), wenn der DN >= 4.5 ist
+     */
+
     public void dnBerechnen() {
         Cursor c = db.rawQuery("SELECT note, art FROM Note WHERE hatid = "+ hatid, null);
         float ges = 0;
         float doppelt = 0;
-        if(c.moveToFirst()) {
+
+        if(c.moveToFirst()) { // Berechnen der Anzahl der Noten und des Gesamtwerts
             do {
                 String art = c.getString(c.getColumnIndex("art"));
                 if(art.equals("Schulaufgabe")) {
                     doppelt += 1;
-                     ges += c.getFloat(c.getColumnIndex("note"));
+                    ges += c.getFloat(c.getColumnIndex("note"));
                 }
                 ges += c.getFloat(c.getColumnIndex("note"));
             } while(c.moveToNext());
         }
         if(c.getCount() != 0) {
-            float durchschnitt = (Math.round((ges / (c.getCount() + doppelt))*100.0F)) / 100.0F;
+            float durchschnitt = ((ges / (c.getCount() + doppelt))*100.0F) / 100.0F; // Berechnen des Durchschnitts, 2 Nachkommastellen
+
             dn.setText(durchschnitt + "");
-            if(durchschnitt >= 4.5) {
+
+            if(durchschnitt >= 4.5) { // Setzen auf Rot, wenn nötig
                 ContentValues gValue = new ContentValues();
                 gValue.put("gefaehrdet", 1);
                 db.update("Schueler", gValue, "sid="+ schueler.getSid(), null);
@@ -112,15 +135,28 @@ public class SchuelerV extends Activity {
                 gValue.put("gefaehrdet", 0);
                 db.update("Schueler", gValue, "sid="+ schueler.getSid(), null);
             }
+
         } else {
             dn.setText("0");
         }
         c.close();
     }
 
+    /**
+     * Theoretisch ein Umweg, praktisch eine Hilfe zur Übersicht.
+     * @param table Tabelle, in die eingefügt werden soll
+     * @param nullColumnHack Immer null - wird nur bei sehr spezifischen Fällen benötigt
+     * @param values Die einzufügenden Werte
+     * @return Der Auto-Increment-Primärschlüssel des neuen Datensatzes
+     */
+
     public long insert(String table, String nullColumnHack, ContentValues values){
         return db.insert(table, nullColumnHack, values);
     }
+
+    /**
+     * Fertigt die Liste der LN an und berechnet anschließend den Durchschnitt neu.
+     */
 
     public void listeFertigen() {
         a.clear();
@@ -142,6 +178,14 @@ public class SchuelerV extends Activity {
         c.close();
     }
 
+    /**
+     * Startet einen Dialog (Löschen/Bearbeiten) für den LN.
+     * @param adapterView Der Adapter des ListViews
+     * @param view Das angeklickte View
+     * @param i Die Position des angetippten Items
+     * @param l Die Reihen-ID des angetippten Items
+     */
+
     public void lnClick(AdapterView<?> adapterView, View view, int i, long l) {
         Leistungsnachweis ln = (Leistungsnachweis) lnliste.getItemAtPosition(i);
 
@@ -153,10 +197,19 @@ public class SchuelerV extends Activity {
         dialog.show(getFragmentManager(), "LnDialog");
     }
 
+    /**
+     * Auslagerung des Löschens von LN.
+     * @param ln Der zu löschende LN
+     */
+
     public void deleteLn(Leistungsnachweis ln) {
         db.delete("Note", "nid="+ln.getNid(), null);
         listeFertigen();
     }
+
+    /**
+     * Geht sicher, dass beim selbstständigen Zurückgehen das Ergebnis auch auf RESULT_OK gesetzt wird.
+     */
 
     @Override
     public void onBackPressed() {

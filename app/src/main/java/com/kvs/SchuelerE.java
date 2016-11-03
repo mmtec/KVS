@@ -12,6 +12,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/**
+ * Activity zur Erstellung eines neuen Schülers.
+ * @author Michael Maior
+ * @version 0.2
+ */
+
 public class SchuelerE extends Activity {
 
 	public static int KEY = 298537;
@@ -19,7 +25,13 @@ public class SchuelerE extends Activity {
 	private Button e;
 	private SQLiteDatabase db;
 	private int kfid, posx, posy;
-	
+
+	/**
+	 * Wird beim Start der Activity aufgerufen.
+	 * Instanziiert alle GUI-Objekte.
+	 * Beim Tippen auf den Button wird der neue Schüler erstellt.
+     */
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -39,11 +51,13 @@ public class SchuelerE extends Activity {
 			
 			@Override
 			public void onClick(View v) {
+				String vorname = vn.getText().toString();
+				String nachname = nn.getText().toString();
 				if(posx != -1 && posy != -1) {
-					neuerSchueler(vn.getText().toString(), nn.getText().toString(), posx, posy);
+					neuerSchueler(vorname, nachname, posx, posy);
 					setResult(RESULT_OK);
 					finish();
-				} else {
+				} else { // Dieser Fall kommt eigentlich nie vor, sollte er aber, ist er für das Debuggen geeignet
 					Toast.makeText(getApplicationContext(), "Ungültig!", Toast.LENGTH_LONG);
 				}
 			}
@@ -51,7 +65,15 @@ public class SchuelerE extends Activity {
 
 		return;
 	}
-	
+
+	/**
+	 * Auslagerung des Vorgangs, den Schüler hinzuzufügen.
+	 * @param vorname Vorname des Schülers
+	 * @param nachname Nachname des Schülers
+	 * @param posx x-Koordinate des Schülers
+     * @param posy y-Koordinate des Schülers
+     */
+
 	public void neuerSchueler(String vorname, String nachname, int posx, int posy) {
 		
 		ContentValues schuelerValues = new ContentValues();
@@ -60,7 +82,7 @@ public class SchuelerE extends Activity {
 		schuelerValues.put("posx", posx);
 		schuelerValues.put("posy", posy);
 		
-		int ais = (int)insert("Schueler", null, schuelerValues);
+		int ais = (int)insert("Schueler", null, schuelerValues); // Auto-Increment-Wert des neuen Schülers
 
 		ContentValues hatValues = new ContentValues();
 		hatValues.put("kfid", kfid);
@@ -68,7 +90,15 @@ public class SchuelerE extends Activity {
 		insert("Hat", null, hatValues);
 
 	}
-	
+
+	/**
+	 * Theoretisch ein Umweg, praktisch eine Hilfe zur Übersicht.
+	 * @param table Tabelle, in die eingefügt werden soll
+	 * @param nullColumnHack Immer null - wird nur bei sehr spezifischen Fällen benötigt
+	 * @param values Die einzufügenden Werte
+	 * @return Der Auto-Increment-Primärschlüssel des neuen Datensatzes
+	 */
+
 	public long insert(String table, String nullColumnHack, ContentValues values){
 		return db.insert(table, nullColumnHack, values);
 	}

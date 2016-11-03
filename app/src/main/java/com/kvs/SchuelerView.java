@@ -5,6 +5,10 @@ import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
+/**
+ * Besitzt die gleiche Funktion wie ein TextView, nur mit einem Schüler als Attribut. Sollte kein Schüler vorhanden sein, besteht nur die Information über die x- und y-Koordinate.
+ */
+
 public class SchuelerView extends TextView {
 
     private Schueler schueler;

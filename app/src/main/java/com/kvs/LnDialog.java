@@ -6,6 +6,9 @@ import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
+/**
+ * Dialog, der um den gewünschten Vorgang mit einem vorhandenen Leistungsnachweis bittet.
+ */
 
 public class LnDialog extends DialogFragment {
 

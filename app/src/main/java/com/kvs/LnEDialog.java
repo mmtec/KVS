@@ -14,6 +14,10 @@ import android.widget.NumberPicker;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+/**
+ * Dialog zur Erstellung eines Leistungsnachweises.
+ */
+
 public class LnEDialog extends DialogFragment {
 
     private NumberPicker np;

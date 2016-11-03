@@ -16,6 +16,12 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+/**
+ * Die MainActivity. Beinhaltet Liste der Klassen, einen Knopf zum Hinzufügen der Klassen und einen Knopf zum Reset der Datenbank.
+ * @author Michael Maior
+ * @version 0.2
+ */
+
 public class Start extends Activity {
 
 	private ListView liste;
@@ -23,6 +29,12 @@ public class Start extends Activity {
 	private Button plus, d;
 	private SQLiteDatabase db;
 	private Intent intent;
+
+	/**
+	 * Wird beim Start der Activity aufgerufen.
+	 * Instanziiert alle GUI-Objekte und den ArrayAdapter.
+	 * Setzt ActionListener für Buttons und ListView-Elemente.
+     */
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -85,6 +97,10 @@ public class Start extends Activity {
 		return true;
 	}
 
+	/**
+	 * Derzeit noch ein Stub. Hierüber können auch MenuItems angesprochen werden.
+     */
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will
@@ -97,12 +113,20 @@ public class Start extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 
+	/**
+	 * Updatet die Liste, nachdem eine neue Klasse hinzugefügt wurde.
+     */
+
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (requestCode == KlasseE.KEY && resultCode == Activity.RESULT_OK) {
 			listeFertigen();
 		}
 	}
-	
+
+	/**
+	 * Erstellt die Datenbank und ihre Tabellen.
+	 */
+
 	public void dbErstellen() {
 		db = openOrCreateDatabase("KVS", MODE_PRIVATE, null);
 		
@@ -125,7 +149,11 @@ public class Start extends Activity {
 		db.execSQL("CREATE TABLE IF NOT EXISTS Note(nid INTEGER PRIMARY KEY ASC,"
 				+ " hatid INTEGER(5), art VARCHAR(100), note INTEGER(2), tag INTEGER(2), monat INTEGER(2), jahr INTEGER(4))");
 	}
-	
+
+	/**
+	 * Sucht sich alle Klassen, die es gibt heraus und fügt diese der Liste (bzw. dem ArrayAdapter) hinzu.
+	 */
+
 	public void listeFertigen() {
 		a.clear();
 		Cursor c = db.rawQuery("SELECT KF.klasseid, KF.fachid, klassename, fachname FROM Klasse, KF, Fach WHERE KF.klasseid = Klasse.kid AND KF.fachid = Fach.fid", null);
@@ -143,7 +171,11 @@ public class Start extends Activity {
 		}
 		c.close();
 	}
-	
+
+	/**
+	 * Löscht die Datenbank, erstellt die Tabellen neu und updatet die Liste.
+	 */
+
 	public void dbLoeschen() {
 		this.deleteDatabase("KVS");
 		dbErstellen();

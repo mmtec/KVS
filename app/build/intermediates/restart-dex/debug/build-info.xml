@@ -4,54 +4,33 @@
     density="420dpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="118825523196561"
+    timestamp="1002377456077268"
     token="-29533309509229123"
-    verifier="COMPATIBLE" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="181" />
+        duration="1142" />
     <task
         name="instant-run-dex"
-        duration="487" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="25" />
+        duration="682" />
     <task
         name="verifier"
-        duration="3" />
+        duration="49" />
 
     <artifact
-        location="C:\Users\thawa\StudioProjects\KVS\app\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="C:\Users\thawa\StudioProjects\KVS\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="116024348836608"
+        timestamp="1002377456077268"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\thawa\StudioProjects\KVS\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="116573200728571"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\thawa\StudioProjects\KVS\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
-            type="RESOURCES" />
-    </build>
-    <build
-        timestamp="118566470718197"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\thawa\StudioProjects\KVS\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="118825523196561"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\thawa\StudioProjects\KVS\app\build\intermediates\reload-dex\debug\classes.dex"
-            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

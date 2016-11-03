@@ -1,4 +1,7 @@
-#Fri Oct 21 23:23:47 CEST 2016
-base.0=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+#Thu Nov 03 11:51:16 CET 2016
+base.0=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_c8ecdda1199f02d8a9b0277f7053ff066f61f8c2
+renamed.1=classes2.dex
 renamed.0=classes.dex
-file.0=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
+file.1=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_16f02ca57ce62cd00a5ce2a18a25f89f30e8ef6c\\classes.dex
+base.1=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_16f02ca57ce62cd00a5ce2a18a25f89f30e8ef6c
+file.0=C\:\\Users\\thawa\\StudioProjects\\KVS\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_c8ecdda1199f02d8a9b0277f7053ff066f61f8c2\\classes.dex
